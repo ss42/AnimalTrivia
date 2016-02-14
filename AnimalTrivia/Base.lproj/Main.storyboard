@@ -168,6 +168,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H92-KZ-C78" userLabel="Next">
                                 <rect key="frame" x="8" y="517" width="424" height="63"/>
                                 <state key="normal" image="nextButton_NEW"/>
+                                <connections>
+                                    <segue destination="lm0-mV-Vs2" kind="show" id="6Uf-67-3dR"/>
+                                </connections>
                             </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="incorrectAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="nq8-G3-hcH">
                                 <rect key="frame" x="27" y="345" width="30" height="30"/>
@@ -192,6 +195,95 @@
             </objects>
             <point key="canvasLocation" x="534" y="575"/>
         </scene>
+        <!--Third View Controller-->
+        <scene sceneID="Sk7-4W-Ddi">
+            <objects>
+                <viewController id="lm0-mV-Vs2" customClass="ThirdViewController" customModule="AnimalTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Smt-5D-j4H"/>
+                        <viewControllerLayoutGuide type="bottom" id="m1w-xt-cUD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qjh-r8-Y0B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What do giant pandas eat exclusively?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDa-TV-dP4">
+                                <rect key="frame" x="20" y="28" width="500" height="38"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="platypus" translatesAutoresizingMaskIntoConstraints="NO" id="1Ld-A2-2z2">
+                                <rect key="frame" x="69" y="74" width="254" height="254"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smaller Pandas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqY-cJ-jnj">
+                                <rect key="frame" x="76" y="413" width="195" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bamboos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2un-If-end">
+                                <rect key="frame" x="76" y="459" width="195" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVF-dk-O8L">
+                                <rect key="frame" x="20" y="455" width="30" height="30"/>
+                                <state key="normal" image="C"/>
+                                <connections>
+                                    <action selector="CButtonPressed:" destination="lm0-mV-Vs2" eventType="touchUpInside" id="dlz-wR-ktO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipi-uI-bBu">
+                                <rect key="frame" x="20" y="362" width="30" height="30"/>
+                                <state key="normal" image="A"/>
+                                <connections>
+                                    <action selector="AButtonPressed:" destination="lm0-mV-Vs2" eventType="touchUpInside" id="AuX-nb-dsI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd8-3W-kl6">
+                                <rect key="frame" x="56" y="508" width="221" height="51"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="7rR-Ph-bLj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwF-DQ-LU9">
+                                <rect key="frame" x="20" y="409" width="30" height="30"/>
+                                <state key="normal" image="B"/>
+                                <connections>
+                                    <action selector="BButtonPressed:" destination="lm0-mV-Vs2" eventType="touchUpInside" id="ARM-UB-U5k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="McDonald's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyP-U3-2Ui">
+                                <rect key="frame" x="76" y="366" width="183" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="AButton" destination="Ipi-uI-bBu" id="AHk-U3-r7B"/>
+                        <outlet property="ALabel" destination="iyP-U3-2Ui" id="TOQ-Yh-gLi"/>
+                        <outlet property="BButton" destination="TwF-DQ-LU9" id="PbK-4X-9O5"/>
+                        <outlet property="BLabel" destination="AqY-cJ-jnj" id="Seg-rh-nCn"/>
+                        <outlet property="CButton" destination="JVF-dk-O8L" id="DoD-Ds-YfH"/>
+                        <outlet property="CLabel" destination="2un-If-end" id="GNh-3m-PpS"/>
+                        <outlet property="startOverButton" destination="Rd8-3W-kl6" id="SuJ-9T-uct"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saf-ff-2eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185" y="739"/>
+        </scene>
     </scenes>
     <resources>
         <image name="A" width="30" height="30"/>
@@ -201,6 +293,7 @@
         <image name="incorrectAnswer" width="30" height="30"/>
         <image name="nextButton_NEW" width="370" height="63"/>
         <image name="panda" width="254" height="254"/>
+        <image name="platypus" width="254" height="254"/>
         <image name="polarBear" width="254" height="254"/>
     </resources>
 </document>
